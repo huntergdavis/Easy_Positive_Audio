@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<TableRow android:layout_width="fill_parent"
+		android:layout_alignParentTop="true" android:layout_height="wrap_content"
+		android:id="@+id/buttonrow">
+		<Button android:id="@+id/savebutton" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:text="Save" />
+		<Button android:id="@+id/playbutton" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:text="Play" />
+		<TextView android:layout_width="fill_parent" android:id="@+id/positive"
+			android:text="Click to Select Audio File" android:layout_height="wrap_content"></TextView>
+	</TableRow>
+	<TextView android:text="Select From Previous Positive Audio Clips:"
+		android:id="@+id/explanationtext" android:layout_width="fill_parent"
+		android:layout_below="@+id/buttonrow" android:layout_height="wrap_content"></TextView>
+
+	<Spinner android:layout_width="fill_parent"
+		android:layout_below="@+id/explanationtext" android:layout_height="wrap_content"
+		android:id="@+id/oldpositives">
+	</Spinner>
+
+	<TableRow android:layout_width="fill_parent"
+		android:layout_below="@+id/oldpositives" android:layout_height="wrap_content"
+		android:id="@+id/secondbuttonrow">
+		<Button android:id="@+id/deletebutton" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:text="Remove"
+			android:layout_weight="1" />
+		<Button android:id="@+id/randombutton" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:text="Random"
+			android:layout_weight="1" />
+	</TableRow>
+
+
+
+	<com.google.ads.AdView android:id="@+id/adView"
+		android:layout_alignParentBottom="true" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" ads:adUnitId="a14dfa426d3764a"
+		ads:adSize="BANNER" ads:loadAdOnCreate="false" />
+
+</LinearLayout>
